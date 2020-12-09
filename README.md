@@ -8,6 +8,8 @@ function information is logged using a callback function on perfMetrics, current
 
 Using reporter like `node reports/html.js stats.log stats` will create a stats.html report. 
 
+## Notes
+
 This is still a work in progress, but alredy a working beta. 
 There are examples on the examples folder of this repo. 
 There is an example output here https://fsvieira.github.io/perfmetrics/
