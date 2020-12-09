@@ -1,7 +1,6 @@
 const Analytics = require("../analytics");
 const fs = require("fs");
 
-const [node, script, logA, outfile] = process.argv;
 
 function genStatsTable(stats) {
 
@@ -88,20 +87,4 @@ function genHtml(name, report) {
     `;
 }
 
-fs.readFile(logA, (err, data) => {
-    if (err) {
-        console.log(err);
-        return;
-    }
-
-    const logs = JSON.parse(data);
-    const report = Analytics.analyze(logs);
-
-    fs.writeFile(outfile.replace(".html", "") + ".html", genHtml(logA, report), err => {
-        if (err) {
-            console.log(err);
-        }
-    });
-
-});
-
+module.exports = genHtml;
