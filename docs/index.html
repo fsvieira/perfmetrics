@@ -1,0 +1,99 @@
+
+        <!DOCTYPE html>
+        <html>
+        <style>
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            margin: 0 auto;
+        }
+
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+    </style>
+        <head>
+        <title>stats.log</title>
+        </head>
+        <body>
+            <table class="styled-table">
+        <thead>
+            <tr>
+                <td>Function Name</td>
+                <td>Min (ms)</td>
+                <td>Avg (ms)</td>
+                <td>Max (ms)</td>
+                <td>Complexity (lower / upper bound)</td>
+                <td>Usage</td>
+            </tr>
+        </thead>
+        <tbody><tr><td>constanteTime</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>0.01</td>
+<td>O(1)</td>
+<td>0%</td>
+</tr>
+<tr><td>linearTime</td>
+<td>0.01</td>
+<td>0.10</td>
+<td>0.05</td>
+<td>O(n) / 2^(O(log n))</td>
+<td>0%</td>
+</tr>
+<tr><td>quadraticTime</td>
+<td>41.93</td>
+<td>75.68</td>
+<td>104.31</td>
+<td>O(n) / O(2^n)</td>
+<td>100%</td>
+</tr>
+<tr><td>polynomialTime</td>
+<td>0.00</td>
+<td>0.05</td>
+<td>0.18</td>
+<td>O(n) / 2^(O(log n))</td>
+<td>0%</td>
+</tr>
+<tr><td>asyncLinearTimeWrap</td>
+<td>0.01</td>
+<td>0.02</td>
+<td>0.02</td>
+<td>O(n) / 2^(O(log n))</td>
+<td>0%</td>
+</tr>
+<tr><td>Promise.then</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>O(1)</td>
+<td>0%</td>
+</tr>
+        </tbody>
+        </table>
+        </body>
+        </html> 
+    
