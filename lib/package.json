@@ -1,5 +1,5 @@
 {
-  "name": "perfmetrics",
+  "name": "@perfmetrics/lib",
   "version": "1.0.0",
   "description": "",
   "main": "build/perfmetrics.js",
