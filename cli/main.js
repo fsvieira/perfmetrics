@@ -60,7 +60,6 @@ function cli(args) {
                     const filename = html.replace(".html", "") + ".html";
                     const dirname = path.dirname(filename);
 
-                    console.log(dirname);
                     await mkdirp(dirname);
 
                     fs.writeFile(filename, htmlReport(stats, report), { encoding: 'utf8', flag: 'w' }, err => {
