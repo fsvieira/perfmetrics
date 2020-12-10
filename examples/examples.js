@@ -47,14 +47,30 @@ const quadraticTimePerf = perfMetrics(quadraticTime, fsLogger);
 const polynomialTimePerf = perfMetrics(polynomialTime, fsLogger);
 const asyncLinearTimePerf = perfMetrics(async function asyncLinearTimeWrap(n) { await asyncLinearTime(n) }, fsLogger);
 
+class SimpleClass {
+    hello(s) {
+        return `Hello ${s} ${this.world()}`;
+    }
+
+    world() {
+        return "world";
+    }
+}
+
+const SimpleClassTimePerf = perfMetrics(SimpleClass, fsLogger);
 
 async function test() {
+
+    const sc = new SimpleClassTimePerf();
+
     for (let i = 0; i < 100; i++) {
         constanteTimePerf(1000 + i);
         linearTimePerf(1000 + i, 2);
         quadraticTimePerf(1000 + i);
         polynomialTimePerf(i, 2);
         await asyncLinearTimePerf(i);
+
+        sc.hello(i);
     }
 }
 
