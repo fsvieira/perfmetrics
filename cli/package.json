@@ -1,0 +1,17 @@
+{
+  "name": "@perfmetrics/perfmetrics-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "author": "Filipe Vieira",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsvieira/perfmetrics.git"
+  },
+  "dependencies": {
+    "arg": "^5.0.0",
+    "mkdirp": "^1.0.4",
+    "regression": "^2.0.1"
+  }
+}

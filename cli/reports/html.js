@@ -1,7 +1,3 @@
-const Analytics = require("../analytics");
-const fs = require("fs");
-
-
 function genStatsTable(stats) {
 
     return `<table class="styled-table">

@@ -1,0 +1,19 @@
+{
+  "name": "@perfmetrics/filestats",
+  "version": "1.0.0",
+  "description": "File Stats logger for perfmetrics",
+  "main": "filestats.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Filipe Vieira",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fsvieira/perfmetrics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fsvieira/perfmetrics/issues"
+  },
+  "homepage": "https://github.com/fsvieira/perfmetrics#readme"
+}

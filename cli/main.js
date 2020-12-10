@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const htmlReport = require("../reports/html");
+const htmlReport = require("./reports/html");
 const mkdirp = require("mkdirp");
 const arg = require('arg');
 const fs = require("fs");
-const Analytics = require("../analytics");
+const Analytics = require("./analytics");
 const path = require("path");
 
 function parseArgumentsIntoOptions(rawArgs) {

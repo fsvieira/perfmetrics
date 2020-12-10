@@ -1,5 +1,5 @@
-const perfMetrics = require("../perfmetrics");
-const fileStats = require("../loggers/fileStats");
+const perfMetrics = require("../lib/perfmetrics");
+const fileStats = require("../loggers/filestats/filestats");
 
 function constanteTime(n) {
     return n % 2 ? 'Odd' : 'Even';
