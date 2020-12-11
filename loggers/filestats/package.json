@@ -1,6 +1,6 @@
 {
   "name": "@perfmetrics/filestats",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "File Stats logger for perfmetrics",
   "main": "filestats.js",
   "scripts": {
