@@ -67,7 +67,19 @@ function getStyles() {
 }
 
 function genHtml(name, report) {
-    const table = genStatsTable(report.stats);
+    const table = genStatsTable(report.stats.sort(
+        (a, b) => {
+            if (a.usagePercentage !== b.usagePercentage) {
+                return b.usagePercentage - a.usagePercentage;
+            }
+
+            if (b.avg !== a.avg) {
+                return b.avg - a.avg;
+            }
+
+            return b.max - a.max;
+        }
+    ));
 
     return `
         <!DOCTYPE html>
