@@ -47,9 +47,23 @@ const quadraticTimePerf = perfMetrics(quadraticTime, fsLogger);
 const polynomialTimePerf = perfMetrics(polynomialTime, fsLogger);
 const asyncLinearTimePerf = perfMetrics(async function asyncLinearTimeWrap(n) { await asyncLinearTime(n) }, fsLogger);
 
+class DeepClass {
+    test1() {
+        return "test1, next: " + this.test2();
+    }
+
+    test2() {
+        return "test2";
+    }
+}
+
 class SimpleClass {
+    constructor() {
+        this.deep = new DeepClass();
+    }
+
     hello(s) {
-        return `Hello ${s} ${this.world()}`;
+        return `Hello ${s} ${this.world()} ${this.deep.test1()}`;
     }
 
     world() {
