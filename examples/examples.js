@@ -71,6 +71,12 @@ class SimpleClass {
     }
 }
 
+function func(a, x, b = x => x + 1) {
+    return a(b(x));
+}
+
+const callbackTimePerf = perfMetrics(func, fsLogger);
+
 const SimpleClassTimePerf = perfMetrics(SimpleClass, fsLogger);
 
 async function test() {
@@ -85,6 +91,8 @@ async function test() {
         await asyncLinearTimePerf(i);
 
         sc.hello(i);
+
+        callbackTimePerf(x => x * 2, i);
     }
 }
 
